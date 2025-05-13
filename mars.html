@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Exploration Program - NASA Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .mission-detail {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            color: white;
+        }
+        .mission-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .mission-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .mission-image {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .mission-text {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        .back-button {
+            display: inline-block;
+            margin: 1rem 0;
+            padding: 0.5rem 1rem;
+            background: #0B3D91;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .back-button:hover {
+            background: #FC3D21;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://img.icons8.com/color/480/nasa.png" alt="NASA Logo" style="height: 50px;">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#missions">Missions</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="index.html#about">About NASA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="mission-detail">
+        <a href="index.html" class="back-button">← Back to Missions</a>
+        <div class="mission-header">
+            <h1>Mars Exploration Program</h1>
+            <p>Ongoing since 2000</p>
+        </div>
+        <div class="mission-content">
+            <div>
+                <img src="https://scitechdaily.com/images/NASA-Curiosity-Mars-Rover-Science-Instruments.jpg" alt="Curiosity Mars Rover" class="mission-image">
+            </div>
+            <div class="mission-text">
+                <h2>Program Overview</h2>
+                <p>The Mars Exploration Program is a long-term effort to explore the planet Mars, funded and led by NASA. The program includes a series of robotic orbiters, landers, and rovers that have been studying the Red Planet since 2000.</p>
+                
+                <h2>Key Missions</h2>
+                <ul>
+                    <li>Spirit and Opportunity (2004-2018)</li>
+                    <li>Curiosity (2012-present)</li>
+                    <li>Perseverance (2021-present)</li>
+                    <li>Ingenuity Helicopter (2021-present)</li>
+                </ul>
+
+                <h2>Major Discoveries</h2>
+                <ul>
+                    <li>Evidence of past water on Mars</li>
+                    <li>Ancient riverbeds and lakebeds</li>
+                    <li>Organic molecules in Martian soil</li>
+                    <li>Seasonal methane variations</li>
+                    <li>Evidence of ancient microbial life</li>
+                </ul>
+
+                <h2>Future Goals</h2>
+                <p>The program's goals include determining if life ever arose on Mars, characterizing the climate of Mars, characterizing the geology of Mars, and preparing for human exploration. The program is also developing the technology needed for a human mission to Mars.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2024 NASA Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 

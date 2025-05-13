@@ -1,0 +1,322 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #000;
+}
+
+/* Header and Navigation */
+header {
+    background-color: rgba(11, 61, 145, 0.9);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #FC3D21;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('https://image.pbs.org/contentchannels/Gu7QxOA-background-B9H76Or.jpg?focalcrop=1200x630x50x10&format=auto') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding-top: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #fff, #0B3D91);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+}
+
+/* Missions Section */
+.missions {
+    padding: 4rem 2rem;
+    background: linear-gradient(45deg, #000, #0B3D91);
+    color: white;
+}
+
+.missions h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(11, 61, 145, 0.8);
+}
+
+.mission-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mission-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.mission-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(11, 61, 145, 0.4);
+}
+
+.mission-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.mission-card h3 {
+    padding: 1rem;
+    color: #fff;
+}
+
+.mission-card p {
+    padding: 0 1rem 1rem;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 4rem 2rem;
+    background: linear-gradient(45deg, #0B3D91, #000);
+}
+
+.gallery h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(11, 61, 145, 0.8);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    border-color: rgba(11, 61, 145, 0.8);
+    box-shadow: 0 0 20px rgba(11, 61, 145, 0.4);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover .overlay {
+    transform: translateY(0);
+}
+
+/* About Section */
+.about {
+    padding: 4rem 2rem;
+    background: linear-gradient(45deg, #000, #0B3D91);
+    color: white;
+}
+
+.about h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(11, 61, 145, 0.8);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to bottom, rgba(11, 61, 145, 0.9), rgba(0, 0, 0, 0.9));
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-links {
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #FC3D21;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-image {
+        order: -1;
+    }
+} 
